@@ -1,0 +1,76 @@
+body {
+    background-color: #e3f2fd; /* Biru muda */
+}
+.main-container {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.card-header-blue {
+    background-color: #1a237e; /* Biru tua */
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
+    text-align: center;
+}
+.btn-primary {
+    background-color: #42a5f5; /* Biru sedang */
+    border-color: #42a5f5;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #1e88e5; /* Biru tua saat dihover */
+    border-color: #1e88e5;
+}
+.card-title {
+    color: #1a237e;
+    font-weight: 600;
+}
+.card-text {
+    color: #555;
+}
+.list-unstyled li small {
+    color: #555;
+}
+a.text-decoration-none {
+    color: #42a5f5;
+    transition: color 0.3s ease;
+}
+a.text-decoration-none:hover {
+    color: #1e88e5;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+    background: #fff;
+    padding: 6px 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+.legend-icon-lelang {
+    background-image: url("{{ asset('images/lelang-icon.png') }}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 8px;
+    margin-top: -3px;
+}

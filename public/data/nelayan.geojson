@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "kegiatan": "Penangkapan Ikan", "lokasi": "TPI Karangsong" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [108.325, -6.325]
+      }
+    }
+  ]
+}
