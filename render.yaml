@@ -10,4 +10,8 @@ services:
       - key: APP_DEBUG
         value: false
       - key: APP_KEY
-        generateValue: true
+        value: base64:MASUKKAN_KEY_DARI_ENV_MU
+      - key: APP_URL
+        value: https://si-perikanan.onrender.com
+      - key: CACHE_STORE
+        value: file

@@ -37,7 +37,6 @@
             </p>
             <a href="#cuaca" class="cta-button">Jelajahi Sekarang</a>
         </div>
-        <div class="wave"></div>
     </section>
 
     <!-- ===== Main Content ===== -->
