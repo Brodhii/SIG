@@ -3,7 +3,7 @@ FROM php:8.2-apache
 
 # Install ekstensi PHP yang dibutuhkan Laravel
 RUN apt-get update && apt-get install -y \
-    git unzip libpq-dev libzip-dev libsqlite3-dev zip \
+    git unzip libpq-dev libzip-dev libsqlite3-dev zip curl nodejs npm \
     && docker-php-ext-install pdo pdo_mysql pdo_sqlite zip
 
 # Install Composer
@@ -19,23 +19,30 @@ COPY . .
 RUN mkdir -p database && touch database/database.sqlite
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 
-# Install dependency Laravel
-RUN composer install --no-dev --optimize-autoloader
+# Install dependency Laravel (composer)
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+
+# Install dependency frontend dan build asset (CSS/JS)
+RUN npm install --force
+RUN npm run build
 
 # Generate APP key (abaikan error kalau APP_KEY sudah ada)
 RUN php artisan key:generate || true
 
-# Jalankan migrasi (jika gagal tidak hentikan build)
+# Jalankan migrasi database (jika gagal tidak hentikan build)
 RUN php artisan migrate --force || true
 
-# Cache config
+# Cache konfigurasi Laravel
 RUN php artisan config:cache || true
 
-# Ganti DocumentRoot Apache ke folder public
+# Ubah DocumentRoot Apache ke folder public
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 
-# Clear cache
+# Bersihkan cache (agar tidak bentrok di produksi)
 RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
+
+# Pastikan permission aman
+RUN chmod -R 755 /var/www/html/public
 
 # Expose port 80
 EXPOSE 80

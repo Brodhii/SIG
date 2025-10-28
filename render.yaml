@@ -13,5 +13,7 @@ services:
         value: base64:m0UJ00p7PMQlOyw3xNfc53DJODEPjoMXDFMubuAIRaw=
       - key: APP_URL
         value: https://si-perikanan.onrender.com
+      - key: ASSET_URL
+        value: https://si-perikanan.onrender.com
       - key: CACHE_STORE
         value: file
