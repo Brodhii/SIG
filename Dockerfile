@@ -30,7 +30,9 @@ RUN php artisan cache:clear || true
 RUN php artisan view:clear || true
 
 # Generate APP key kalau belum ada
-RUN php artisan key:generate --force || true
+RUN php artisan key:generate || true
+RUN php artisan migrate --force || true
+RUN php artisan config:cache || true
 
 # Ubah DocumentRoot Apache ke folder public
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
