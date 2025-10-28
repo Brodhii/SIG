@@ -41,5 +41,9 @@ RUN chown -R www-data:www-data /var/www/html
 # Expose port 80 untuk Render
 EXPOSE 80
 
+# Set environment manual untuk debugging
+ENV APP_ENV=local
+ENV APP_DEBUG=true
+
 # Jalankan Apache
 CMD ["apache2-foreground"]
