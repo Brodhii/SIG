@@ -4,7 +4,7 @@
 <div class="container mt-4">
     @if($lokasi)
         <div class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+           <div class="card-header text-white" style="background-color: #1a237e;">
                 <h5 class="mb-0">
                     Prakiraan Cuaca: {{ $lokasi['desa'] }}, {{ $lokasi['kecamatan'] }}, {{ $lokasi['kotkab'] }}
                 </h5>
