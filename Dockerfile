@@ -3,7 +3,7 @@ FROM php:8.2-apache
 
 # Install ekstensi PHP yang dibutuhkan Laravel
 RUN apt-get update && apt-get install -y \
-    git unzip libpq-dev libzip-dev zip \
+    git unzip libpq-dev libzip-dev libsqlite3-dev zip \
     && docker-php-ext-install pdo pdo_mysql pdo_sqlite zip
 
 # Install Composer
@@ -15,7 +15,7 @@ WORKDIR /var/www/html
 # Copy semua file project
 COPY . .
 
-# Pastikan folder bisa ditulis
+# Pastikan folder bisa ditulis dan database file ada
 RUN mkdir -p database && touch database/database.sqlite
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
 
@@ -25,7 +25,7 @@ RUN composer install --no-dev --optimize-autoloader
 # Generate APP key (abaikan error kalau APP_KEY sudah ada)
 RUN php artisan key:generate || true
 
-# Jalankan migrasi (jika gagal tidak menghentikan build)
+# Jalankan migrasi (jika gagal tidak hentikan build)
 RUN php artisan migrate --force || true
 
 # Cache config
