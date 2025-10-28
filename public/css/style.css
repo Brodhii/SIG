@@ -100,18 +100,6 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* ===== Hero Wave Animation ===== */
-@keyframes waveMove {
-    from { background-position-x: 0; }
-    to { background-position-x: 1000px; }
-}
-
-/* ===== Animations ===== */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* ===== Main Container ===== */
 .main-container {
     padding-top: 100px;

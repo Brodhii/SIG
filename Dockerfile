@@ -28,6 +28,8 @@ RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available
 # Pastikan hak akses file aman
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
+RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
+
 # Expose port 80
 EXPOSE 80
 
