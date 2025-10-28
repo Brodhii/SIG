@@ -1,13 +1,9 @@
 services:
   - type: web
     name: si-perikanan
-    env: php
+    env: docker
     plan: free
-    buildCommand: |
-      composer install
-      php artisan key:generate
-      php artisan migrate --force || true
-    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: APP_ENV
         value: production
