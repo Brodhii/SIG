@@ -12,25 +12,33 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Set folder kerja di container
 WORKDIR /var/www/html
 
-# Copy semua file project
+# Copy semua file project ke container
 COPY . .
 
 # Install dependency Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Generate APP key (abaikan error kalau APP_KEY sudah ada)
-RUN php artisan key:generate || true
-RUN php artisan config:cache || true
+# Pastikan folder storage dan cache ada
+RUN mkdir -p storage bootstrap/cache
 
-# Ganti DocumentRoot Apache ke folder public
+# Atur izin akses agar Laravel bisa menulis log dan cache
+RUN chmod -R 775 storage bootstrap/cache
+
+# Bersihkan dan cache ulang konfigurasi Laravel
+RUN php artisan config:clear || true
+RUN php artisan cache:clear || true
+RUN php artisan view:clear || true
+
+# Generate APP key kalau belum ada
+RUN php artisan key:generate --force || true
+
+# Ubah DocumentRoot Apache ke folder public
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 
-# Pastikan hak akses file aman
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+# Ubah owner file ke www-data (user Apache)
+RUN chown -R www-data:www-data /var/www/html
 
-RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
-
-# Expose port 80
+# Expose port 80 untuk Render
 EXPOSE 80
 
 # Jalankan Apache
