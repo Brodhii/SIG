@@ -1,4 +1,4 @@
-// === map.js FINAL versi panel dengan switch + dropdown ===
+// === map.js ===
 
 var map = L.map('gis-map').setView([1.183, 104.537], 15);
 
@@ -27,7 +27,7 @@ const habitatColors = {
   "Pasir": "#D3D3D3",
   "Pasir dengan Karang Hidup": "#0046FF"
 };
-const tangkapanColor = "#E63946"; // warna merah
+const tangkapanColor = "#E63946"; 
 
 // === STYLE ===
 function styleMangrove(f) {

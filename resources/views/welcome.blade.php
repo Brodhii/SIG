@@ -109,9 +109,9 @@
                 <div class="col-md-4 mb-4">
                     <div class="card card-custom p-4">
                         <p class="fst-italic text-muted">
-                            "Saya bisa tahu tempat pelelangan mana yang sedang ramai. Sangat praktis!"
+                            "Website ini memudahkan saya memantau kondisi mangrove dan habitat bentik di sekitar pesisir."
                         </p>
-                        <footer class="blockquote-footer">Ibu Siti, <cite>Pedagang Ikan</cite></footer>
+                        <footer class="blockquote-footer">Ibu Siti, <cite>Warga</cite></footer>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -119,7 +119,7 @@
                         <p class="fst-italic text-muted">
                             "Peta interaktifnya keren! Sangat berguna untuk kegiatan lapangan."
                         </p>
-                        <footer class="blockquote-footer">Mas Eko, <cite>Relawan KKP</cite></footer>
+                        <footer class="blockquote-footer">Mas Eko, <cite>Warga</cite></footer>
                     </div>
                 </div>
             </div>

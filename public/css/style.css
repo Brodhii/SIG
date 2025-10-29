@@ -28,11 +28,10 @@ body {
 }
 
 .logo {
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
-    font-size: 1rem;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
 
 nav ul {
@@ -56,9 +55,10 @@ nav ul li a:hover {
 }
 
 .hero-logo {
-    height: 30px;
-    margin-right: 8px;
+    height: 32px;          
+    margin-right: 10px;    
     vertical-align: middle;
+    object-fit: contain;
 }
 .navbar .container {
     display: flex;
@@ -66,12 +66,15 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 .logo {
-    display: flex;
-    align-items: center;
     font-weight: 700;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
+}
+.hero-logo {
+    max-height: 32px;
+    height: auto;
+    width: auto;
 }
 
 /* ===== Agar tetap tampil di HP tanpa berubah layout ===== */
@@ -106,7 +109,6 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../images/fish-pattern.png") center/cover no-repeat;
     opacity: 0.08;
     z-index: 0;
 }
