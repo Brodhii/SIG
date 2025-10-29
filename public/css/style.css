@@ -55,7 +55,7 @@ nav ul li a:hover {
 }
 
 .hero-logo {
-    height: 32px;          
+    height: 36px;          
     margin-right: 10px;    
     vertical-align: middle;
     object-fit: contain;
@@ -72,7 +72,7 @@ nav ul li a:hover {
     letter-spacing: 0.5px;
 }
 .hero-logo {
-    max-height: 32px;
+    max-height: 36px;
     height: auto;
     width: auto;
 }
