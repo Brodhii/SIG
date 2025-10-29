@@ -12,9 +12,12 @@
 <body>
 
     <!-- ===== Navbar ===== -->
-    <header class="navbar">
+        <header class="navbar">
         <div class="container">
-            <div class="logo">Perikanan Digital</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
+                <span>Perikanan Digital</span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#beranda">Beranda</a></li>
@@ -67,7 +70,7 @@
                             @endforeach
                         </div>
                         <div class="text-center mt-3">
-                            <a href="{{ url('/cuaca') }}" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
+                            <a href="/cuaca" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
                         </div>
                     @else
                         <p class="text-center text-muted">Data cuaca tidak tersedia untuk saat ini.</p>
