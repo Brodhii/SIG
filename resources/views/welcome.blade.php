@@ -15,7 +15,7 @@
         <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
+                {{-- <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo"> --}}
                 <span>Perikanan Digital</span>
             </div>
             <nav>
@@ -72,6 +72,9 @@
                         <div class="text-center mt-3">
                             <a href="/cuaca" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
                         </div>
+                        <p class="mb-0 text-center" style="font-size: 13px;">
+                            Sumber data cuaca: <strong>BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</strong>
+                        </p>
                     @else
                         <p class="text-center text-muted">Data cuaca tidak tersedia untuk saat ini.</p>
                     @endif
@@ -87,7 +90,7 @@
                 </div>
                 <div class="card-body">
                     <p class="text-center text-muted">
-                        Gunakan peta interaktif ini untuk menemukan titik potensi ikan dan habitat perairan.
+                        Peta interaktif ini untuk menemukan titik potensi ikan dan habitat perairan.
                     </p>
                     <div id="gis-map" style="height: 500px; border-radius: 10px;"></div>
                 </div>
@@ -150,7 +153,7 @@
                     <h5 class="fw-bold">Kontak</h5>
                     <ul class="list-unstyled">
                         <li>Email: info@perikanan.digital</li>
-                        <li>Telepon: (021) 123456</li>
+                        <li>Telepon: 0812345678</li>
                         <li>Alamat: Tanjungpinang</li>
                     </ul>
                 </div>
@@ -158,7 +161,7 @@
             <hr class="border-light mt-4">
             <div class="text-center small">
                 &copy; {{ date('Y') }} Sistem Informasi Digital Perikanan<br>
-                <span class="text-light">Sumber data cuaca: BMKG</span>
+               
             </div>
         </div>
     </footer>
