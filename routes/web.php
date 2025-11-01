@@ -10,7 +10,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cuaca', [CuacaController::class, 'index']);
 Route::get('/cuaca', [CuacaController::class, 'index'])->name('cuaca');
 Route::get('/', [CuacaController::class, 'home'])->name('home');
 
