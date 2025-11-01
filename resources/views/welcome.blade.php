@@ -10,36 +10,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <!-- ===== Navbar ===== -->
-        <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                {{-- <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo"> --}}
-                <span>Perikanan Digital</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#cuaca">Cuaca</a></li>
-                    <li><a href="#peta">Peta</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-=======
-<!-- ===== Navbar ===== -->
-<header class="navbar navbar-expand-lg">
-    <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
-            <span>Perikanan Digital</span>
-        </div>
-=======
 <!-- Navbar -->
 <header class="navbar navbar-expand-lg">
     <div class="container">
@@ -48,7 +18,6 @@
             <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
             <span>Perikanan Digital</span>
         </div>
->>>>>>> 565ec33 (ubah tampilan)
         
         <!-- Tombol Toggle (Mobile) -->
         <button class="navbar-toggler" 
@@ -81,10 +50,6 @@
     </div>
 </header>
 
-<<<<<<< HEAD
->>>>>>> ead4742 (ubah tampilan)
-=======
->>>>>>> 565ec33 (ubah tampilan)
 
     <!-- ===== Hero Section ===== -->
     <section class="hero" id="beranda">
@@ -225,12 +190,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<<<<<<< HEAD
-=======
-    <script>
-        const API_URL = "{{ config('app.api_url') }}";
-    </script>
->>>>>>> ead4742 (ubah tampilan)
     <script src="{{ asset('js/map.js') }}"></script>
 </body>
 </html>

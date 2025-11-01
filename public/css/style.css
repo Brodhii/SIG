@@ -14,89 +14,6 @@ body {
     top: 0;
     background: rgba(26, 35, 126, 0.95);
     padding: 15px 0;
-<<<<<<< HEAD
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    z-index: 9999;
-}
-
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.logo {
-    font-weight: 700;
-    color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: nowrap;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #90caf9;
-}
-
-.hero-logo {
-    height: 40px;   
-    width: auto;        
-    vertical-align: middle;
-    object-fit: contain;
-}
-.navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo {
-    font-weight: 700;
-    color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-
-
-/* ===== Agar tetap tampil di HP tanpa berubah layout ===== */
-@media (max-width: 600px) {
-    .navbar .container {
-        flex-wrap: nowrap;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 768px) {
-  .hero-logo {
-    height: 30px;
-  }
-}
-
-
-=======
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
@@ -206,7 +123,6 @@ nav ul li a:hover {
     }
 }
 
->>>>>>> ead4742 (ubah tampilan)
 /* ===== Hero Section ===== */
 .hero {
     height: 100vh;
@@ -223,10 +139,7 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     inset: 0;
-<<<<<<< HEAD
-=======
     background: url("../images/fish-pattern.png") center/cover no-repeat;
->>>>>>> ead4742 (ubah tampilan)
     opacity: 0.08;
     z-index: 0;
 }
@@ -264,8 +177,6 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-<<<<<<< HEAD
-=======
 /* ===== Hero Wave Animation ===== */
 .wave {
     position: absolute;
@@ -288,7 +199,6 @@ nav ul li a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
->>>>>>> ead4742 (ubah tampilan)
 /* ===== Main Container ===== */
 .main-container {
     padding-top: 100px;
@@ -315,11 +225,7 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     height: 100vh;
-<<<<<<< HEAD
-    margin-top: 80px; /* beri jarak dari navbar */
-=======
     margin-top: 30px; /* beri jarak dari navbar */
->>>>>>> ead4742 (ubah tampilan)
     z-index: 1;
     overflow: hidden;
 }
