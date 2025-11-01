@@ -14,6 +14,7 @@ body {
     top: 0;
     background: rgba(26, 35, 126, 0.95);
     padding: 15px 0;
+<<<<<<< HEAD
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     z-index: 9999;
 }
@@ -95,6 +96,117 @@ nav ul li a:hover {
 }
 
 
+=======
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Tombol Toggle Mobile */
+.navbar-toggler {
+    border: none;
+    background: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Navigation Links */
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: #fff !important;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00c3ff !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Desktop View (≥ 992px) */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    
+    .nav-item {
+        margin-left: 5px;
+    }
+    
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+}
+
+/* Mobile View (< 992px) */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        flex: 1;
+    }
+    
+    .navbar-collapse {
+        background: rgba(26, 35, 126, 0.97);
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+>>>>>>> ead4742 (ubah tampilan)
 /* ===== Hero Section ===== */
 .hero {
     height: 100vh;
@@ -111,6 +223,10 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     inset: 0;
+<<<<<<< HEAD
+=======
+    background: url("../images/fish-pattern.png") center/cover no-repeat;
+>>>>>>> ead4742 (ubah tampilan)
     opacity: 0.08;
     z-index: 0;
 }
@@ -148,6 +264,31 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
+<<<<<<< HEAD
+=======
+/* ===== Hero Wave Animation ===== */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e3f2fd' fill-opacity='1' d='M0,192L48,170.7C96,149,192,107,288,117.3C384,128,480,192,576,186.7C672,181,768,107,864,112C960,117,1056,203,1152,234.7C1248,267,1344,245,1392,234.7L1440,224L1440,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+    background-size: cover;
+    animation: waveMove 10s linear infinite;
+}
+@keyframes waveMove {
+    from { background-position-x: 0; }
+    to { background-position-x: 1000px; }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+>>>>>>> ead4742 (ubah tampilan)
 /* ===== Main Container ===== */
 .main-container {
     padding-top: 100px;
@@ -174,7 +315,11 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     height: 100vh;
+<<<<<<< HEAD
     margin-top: 80px; /* beri jarak dari navbar */
+=======
+    margin-top: 30px; /* beri jarak dari navbar */
+>>>>>>> ead4742 (ubah tampilan)
     z-index: 1;
     overflow: hidden;
 }

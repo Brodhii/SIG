@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
+<<<<<<< HEAD
 
     <!-- ===== Navbar ===== -->
         <header class="navbar">
@@ -28,6 +29,48 @@
             </nav>
         </div>
     </header>
+=======
+<!-- ===== Navbar ===== -->
+<header class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
+            <span>Perikanan Digital</span>
+        </div>
+        
+        <!-- Tombol Toggle (Mobile) -->
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Menu Navigasi -->
+        <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#beranda">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cuaca">Cuaca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#peta">Peta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+>>>>>>> ead4742 (ubah tampilan)
 
     <!-- ===== Hero Section ===== -->
     <section class="hero" id="beranda">
@@ -168,6 +211,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        const API_URL = "{{ config('app.api_url') }}";
+    </script>
+>>>>>>> ead4742 (ubah tampilan)
     <script src="{{ asset('js/map.js') }}"></script>
 </body>
 </html>
