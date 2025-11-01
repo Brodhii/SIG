@@ -11,6 +11,7 @@
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <!-- ===== Navbar ===== -->
         <header class="navbar">
@@ -38,6 +39,16 @@
             <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
             <span>Perikanan Digital</span>
         </div>
+=======
+<!-- Navbar -->
+<header class="navbar navbar-expand-lg">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
+            <span>Perikanan Digital</span>
+        </div>
+>>>>>>> 565ec33 (ubah tampilan)
         
         <!-- Tombol Toggle (Mobile) -->
         <button class="navbar-toggler" 
@@ -70,7 +81,10 @@
     </div>
 </header>
 
+<<<<<<< HEAD
 >>>>>>> ead4742 (ubah tampilan)
+=======
+>>>>>>> 565ec33 (ubah tampilan)
 
     <!-- ===== Hero Section ===== -->
     <section class="hero" id="beranda">
