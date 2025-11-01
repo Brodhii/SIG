@@ -92,7 +92,7 @@
                             @endforeach
                         </div>
                         <div class="text-center mt-3">
-                            <a href="/cuaca" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
+                            <a href="{{ route('cuaca') }}" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
                         </div>
                         <p class="mb-0 text-center" style="font-size: 13px;">
                             Sumber data cuaca: <strong>BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</strong>
