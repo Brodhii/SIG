@@ -18,7 +18,9 @@ class CuacaController extends Controller
         $data = $response->json();
 
         $lokasi = $data['lokasi'] ?? null;
-        $cuaca = $data['data'][0]['cuaca'] ?? [];
+        $cuaca = isset($data['data'][0]['cuaca']) && is_array($data['data'][0]['cuaca']) 
+                ? $data['data'][0]['cuaca'] 
+                : [];
 
         return view('cuaca', compact('lokasi', 'cuaca'));
     }
@@ -37,10 +39,10 @@ class CuacaController extends Controller
     $cuaca = $data['data'][0]['cuaca'] ?? [];
 
     $cuacaTiga = [];
-    if (!empty($cuaca[0])) {
+    if (!empty($cuaca[0]) && is_array($cuaca[0])) {
         $cuacaTiga = array_slice($cuaca[0], 0, 3);
     }
-
     return view('welcome', compact('lokasi', 'cuacaTiga'));
+
     }
 }
