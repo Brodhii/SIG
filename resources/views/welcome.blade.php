@@ -19,7 +19,7 @@
             <span>Perikanan Digital</span>
         </div>
         
-        <!-- Tombol Toggle (Mobile) -->
+        <!-- Tombol Toggle -->
         <button class="navbar-toggler" 
                 type="button" 
                 data-bs-toggle="collapse" 
