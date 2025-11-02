@@ -10,12 +10,13 @@ L.tileLayer(
 // === LABEL TEMPAT ===
 L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
-  
+  { maxZoom: 19 }
 ).addTo(map);
 
 // === JALAN & INFRASTRUKTUR ===
 L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
+  { maxZoom: 19 }
 ).addTo(map);
 
 // === STATE ===
