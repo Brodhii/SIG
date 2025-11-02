@@ -1,12 +1,22 @@
-// === map.js FINAL versi panel dengan switch + dropdown ===
+// === INISIALISASI MAP ===
+const map = L.map("gis-map").setView([-6.2, 106.8], 10);
 
-var map = L.map('gis-map').setView([1.183, 104.537], 15);
+// === CITRA DASAR ===
+L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  { attribution: "© Esri — Source: Esri", maxZoom: 19 }
+).addTo(map);
 
-// === BASEMAP ===
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+// === LABEL TEMPAT ===
+L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+  
+).addTo(map);
+
+// === JALAN & INFRASTRUKTUR ===
+L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
+).addTo(map);
 
 // === STATE ===
 let showMangrove = true;
@@ -17,7 +27,7 @@ let selectedHabitat = new Set();
 
 // === WARNA ===
 const mangroveColors = {
-  "Vegetasi Padat": "#0A400C",
+  "Vegetasi Padat": "#4DFFBE",
   "Vegetasi Sedang": "#08CB00",
   "Vegetasi Jarang": "#FFD700"
 };
@@ -188,7 +198,6 @@ function setupLogic(div) {
   const mgList = div.querySelector("#mgList");
   const hbList = div.querySelector("#hbList");
 
-  // buat list kategori mangrove
   Object.entries(mangroveColors).forEach(([name, color]) => {
     const row = document.createElement("div");
     row.style.margin = "2px 0";
@@ -200,7 +209,6 @@ function setupLogic(div) {
     mgList.appendChild(row);
   });
 
-  // buat list habitat
   Object.entries(habitatColors).forEach(([name, color]) => {
     const row = document.createElement("div");
     row.style.margin = "2px 0";
@@ -212,7 +220,6 @@ function setupLogic(div) {
     hbList.appendChild(row);
   });
 
-  // toggle layer utama
   div.querySelector("#toggleMangrove").addEventListener("change", e => {
     showMangrove = e.target.checked;
     if (showMangrove) map.addLayer(mangroveLayer);
@@ -231,7 +238,6 @@ function setupLogic(div) {
     else map.removeLayer(tangkapanLayer);
   });
 
-  // dropdown buka/tutup
   div.querySelector("#dropMangrove").addEventListener("click", () => {
     mgList.style.display = mgList.style.display === "none" ? "block" : "none";
   });
@@ -239,7 +245,6 @@ function setupLogic(div) {
     hbList.style.display = hbList.style.display === "none" ? "block" : "none";
   });
 
-  // filter kategori
   mgList.addEventListener("change", () => {
     selectedMangrove.clear();
     mgList.querySelectorAll(".mgCheck:checked").forEach(cb => selectedMangrove.add(cb.value));
