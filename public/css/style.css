@@ -126,7 +126,7 @@ body {
 /* ===== Hero Section ===== */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #1a237e, #3949ab);
+    background: linear-gradient(135deg, #001f4d 0%, #003c8f 50%, #0277bd 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,49 +135,115 @@ body {
     position: relative;
     overflow: hidden;
 }
-.hero::before {
+
+/* Ombak bergerak di latar belakang */
+.hero::before,
+.hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../images/fish-pattern.png") center/cover no-repeat;
-    opacity: 0.08;
+    background: url('https://svgshare.com/i/14W3.svg') repeat-x;
+    background-size: cover;
+    opacity: 0.12;
+    animation: waves 10s linear infinite;
     z-index: 0;
 }
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 750px;
-    padding: 20px;
-}
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    animation: fadeUp 1s ease forwards;
-}
-.hero p {
-    font-size: 1.1rem;
-    color: #e3f2fd;
-    margin-bottom: 30px;
-    line-height: 1.7;
-    animation: fadeUp 1.5s ease forwards;
-}
-.cta-button {
-    background: #42a5f5;
-    padding: 12px 30px;
-    color: white;
-    border-radius: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s;
-    animation: fadeUp 2s ease forwards;
-}
-.cta-button:hover {
-    background: #1e88e5;
-    transform: translateY(-3px);
+.hero::after {
+    animation-delay: -5s;
+    opacity: 0.18;
 }
 
-/* ===== Hero Wave Animation ===== */
+/* Partikel bubble animasi lembut */
+@keyframes bubbles {
+    0% { transform: translateY(0) scale(0.8); opacity: 0.4; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+}
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: bubbles 15s infinite;
+    z-index: 0;
+}
+
+.bubble:nth-child(1) { left: 10%; width: 15px; height: 15px; animation-delay: 2s; }
+.bubble:nth-child(2) { left: 30%; width: 20px; height: 20px; animation-delay: 4s; }
+.bubble:nth-child(3) { left: 50%; width: 10px; height: 10px; animation-delay: 6s; }
+.bubble:nth-child(4) { left: 70%; width: 25px; height: 25px; animation-delay: 1s; }
+.bubble:nth-child(5) { left: 90%; width: 12px; height: 12px; animation-delay: 3s; }
+
+/* Konten utama */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1.5s ease forwards;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background: linear-gradient(90deg, #ccdce9, #ccdae4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e3f2fd;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Tombol ajakan (CTA) */
+.cta-button {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    padding: 14px 45px;
+    border-radius: 35px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.cta-button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Animasi */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes waves {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+/* Tambahan animasi halus saat load */
+body {
+    animation: fadeBody 1.5s ease;
+}
+@keyframes fadeBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
 .wave {
     position: absolute;
     bottom: 0;

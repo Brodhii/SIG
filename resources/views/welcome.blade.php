@@ -6,8 +6,8 @@
     <title>Sistem Informasi Digital Perikanan</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- Navbar -->
@@ -53,16 +53,22 @@
 
     <!-- ===== Hero Section ===== -->
     <section class="hero" id="beranda">
-        <div class="hero-content">
-            <h1>Sistem Informasi Digital Perikanan</h1>
-            <p>
-                Platform digital terintegrasi yang menyajikan data ekosistem pesisir
-                mulai dari <b>sebaran mangrove</b>, <b>habitat bentik</b>, 
-                hingga <b>lokasi penangkapan ikan</b> berbasis data dan teknologi.
-            </p>
-            <a href="#cuaca" class="cta-button">Jelajahi Sekarang</a>
-        </div>
-    </section>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <div class="hero-content">
+        <h1>Sistem Informasi Digital Perikanan</h1>
+        <p>
+            Platform digital terintegrasi yang menyajikan data ekosistem pesisir
+            mulai dari <b>sebaran mangrove</b>, <b>habitat bentik</b>,
+            hingga <b>lokasi penangkapan ikan</b> berbasis data dan teknologi.
+        </p>
+        <a href="#cuaca" class="cta-button">Jelajahi Sekarang</a>
+    </div>
+</section>
 
     <!-- ===== Main Content ===== -->
     <div class="container main-container">
