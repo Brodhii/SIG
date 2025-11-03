@@ -161,9 +161,9 @@
                     <div class="col-lg-5 col-md-6">
                         <h5 class="fw-bold text-uppercase mb-3">🌊 Sistem Informasi Digital Perikanan</h5>
                         <p class="footer-desc mb-3">
-                            Platform digital terintegrasi yang mendukung nelayan dan masyarakat pesisir 
-                            dengan menyediakan data cuaca, lokasi ikan, 
-                            dan informasi perikanan berbasis teknologi geospasial.
+                            Platform digital terintegrasi yang mendukung nelayan dan masyarakat pesisir dengan menyediakan 
+                            data ekosistem perikanan, informasi cuaca, 
+                            dan peta potensi ikan berbasis teknologi geospasial.
                         </p>
                     </div>
 
