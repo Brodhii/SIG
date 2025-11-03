@@ -6,6 +6,7 @@
         <title>Sistem Informasi Digital Perikanan</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -80,25 +81,20 @@
                         <h5 class="mb-0">Prakiraan Cuaca Wilayah Perikanan</h5>
                     </div>
                     <div class="card-body">
-                        @if($lokasi && count($cuacaTiga) > 0)
+                       @if($lokasi && count($cuacaSemua) > 0)
                             <div class="text-center mb-3">
                                 <h6>{{ $lokasi['desa'] ?? '-' }}, {{ $lokasi['kecamatan'] ?? '-' }}, {{ $lokasi['kotkab'] ?? '-' }}</h6>
                             </div>
-                            <div class="row justify-content-center">
-                                @foreach ($cuacaTiga as $jam)
-                                    <div class="col-md-3 col-10 mb-3">
-                                        <div class="card border-0 shadow-sm text-center p-3">
-                                            <strong>{{ $jam['local_datetime'] ?? '-' }}</strong><br>
-                                            {{ $jam['weather_desc'] ?? 'Tidak ada data' }}<br>
-                                            🌡️ {{ $jam['t'] ?? '-' }}°C |
-                                            💧 {{ $jam['hu'] ?? '-' }}% |
-                                            💨 {{ $jam['ws'] ?? '-' }} km/jam
-                                        </div>
+                            <div class="scroll-container mb-3">
+                                @foreach ($cuacaSemua as $jam)
+                                    <div class="cuaca-card">
+                                        <strong>{{ $jam['local_datetime'] ?? '-' }}</strong><br>
+                                        {{ $jam['weather_desc'] ?? 'Tidak ada data' }}<br>
+                                        🌡️ {{ $jam['t'] ?? '-' }}°C |
+                                        💧 {{ $jam['hu'] ?? '-' }}% |
+                                        💨 {{ $jam['ws'] ?? '-' }} km/jam
                                     </div>
                                 @endforeach
-                            </div>
-                            <div class="text-center mt-3">
-                                <a href="{{ route('cuaca') }}" class="btn btn-outline-primary btn-sm">Lihat Selengkapnya</a>
                             </div>
                             <p class="mb-0 text-center" style="font-size: 13px;">
                                 Sumber data cuaca: <strong>BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</strong>
@@ -127,26 +123,26 @@
 
             <!-- Testimoni -->
             <div class="section mb-5">
-                <h3 class="text-center mb-4 text-primary">Apa Kata Mereka?</h3>
+                <h3 class="text-center mb-4 text-primary animate-fade-in">Apa Kata Mereka?</h3>
                 <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card card-custom p-4">
+                   <div class="col-md-4 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
+                       <div class="card card-custom card-hover p-4">
                             <p class="fst-italic text-muted">
                                 "Website ini sangat membantu saya dalam mencari lokasi ikan yang akurat dan efisien."
                             </p>
                             <footer class="blockquote-footer">Bapak Budi, <cite>Nelayan</cite></footer>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card card-custom p-4">
+                    <div class="col-md-4 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
+                       <div class="card card-custom card-hover p-4">
                             <p class="fst-italic text-muted">
                                 "Website ini memudahkan saya memantau kondisi mangrove dan habitat bentik di sekitar pesisir."
                             </p>
                             <footer class="blockquote-footer">Ibu Siti, <cite>Warga</cite></footer>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card card-custom p-4">
+                    <div class="col-md-4 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
+                       <div class="card card-custom card-hover p-4">
                             <p class="fst-italic text-muted">
                                 "Peta interaktifnya keren! Sangat berguna untuk kegiatan lapangan."
                             </p>
@@ -155,41 +151,48 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- ===== Footer ===== -->
-        <footer id="kontak" class="footer text-white py-5">
+        <footer id="kontak" class="footer text-white pt-5 pb-3">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <h5 class="fw-bold">Tentang Kami</h5>
-                        <p>
-                            Sistem Informasi Digital Perikanan membantu nelayan dan masyarakat 
-                            dengan menyediakan data cuaca, lokasi ikan, dan informasi perikanan terkini.
+                <div class="row gy-4">
+                    <!-- Tentang -->
+                    <div class="col-lg-5 col-md-6">
+                        <h5 class="fw-bold text-uppercase mb-3">🌊 Sistem Informasi Digital Perikanan</h5>
+                        <p class="footer-desc mb-3">
+                            Platform digital terintegrasi yang mendukung nelayan dan masyarakat pesisir 
+                            dengan menyediakan <strong>data cuaca</strong>, <strong>lokasi ikan</strong>, 
+                            dan <strong>informasi perikanan</strong> berbasis teknologi geospasial.
                         </p>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <h5 class="fw-bold">Tautan Cepat</h5>
-                        <ul class="list-unstyled">
+
+                    <!-- Tautan Cepat -->
+                    <div class="col-lg-3 col-md-3 col-6">
+                        <h6 class="fw-bold text-uppercase mb-3">Tautan Cepat</h6>
+                        <ul class="list-unstyled footer-links">
                             <li><a href="#beranda">Beranda</a></li>
-                            <li><a href="#peta">Peta</a></li>
-                            <li><a href="#cuaca">Cuaca</a></li>
+                            <li><a href="#peta">Peta Digital</a></li>
+                            <li><a href="#cuaca">Prakiraan Cuaca</a></li>
+                            <li><a href="#kontak">Kontak</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
-                        <h5 class="fw-bold">Kontak</h5>
-                        <ul class="list-unstyled">
-                            <li>Email: info@perikanan.digital</li>
-                            <li>Telepon: 0812345678</li>
-                            <li>Alamat: Tanjungpinang</li>
+
+                    <!-- Kontak -->
+                    <div class="col-lg-4 col-md-3 col-6">
+                        <h6 class="fw-bold text-uppercase mb-3">Hubungi Kami</h6>
+                        <ul class="list-unstyled footer-contacts">
+                            <li><i class="bi bi-envelope-fill me-2"></i> info@perikanan.digital</li>
+                            <li><i class="bi bi-telephone-fill me-2"></i> +62 812 3456 7890</li>
+                            <li><i class="bi bi-geo-alt-fill me-2"></i> Tanjungpinang, Kepulauan Riau</li>
                         </ul>
                     </div>
                 </div>
-                <hr class="border-light mt-4">
-                <div class="text-center small">
-                    &copy; {{ date('Y') }} Sistem Informasi Digital Perikanan<br>
-                
+
+                <hr class="border-light my-4">
+
+                <div class="text-center small text-light">
+                    &copy; {{ date('Y') }} <strong>Sistem Informasi Digital Perikanan.<br>
                 </div>
             </div>
         </footer>

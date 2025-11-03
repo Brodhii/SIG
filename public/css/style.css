@@ -198,8 +198,8 @@ body {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 25px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    background: linear-gradient(90deg, #ccdce9, #ccdae4);
+    text-shadow: 0 4px 10px rgba(41, 40, 40, 0.723);
+    background: linear-gradient(90deg, #ffffff, #fef2f2b8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -276,20 +276,46 @@ body {
     padding-bottom: 50px;
 }
 
-/* ===== Card ===== */
+/* ===== Section Testimoni ===== */
+
+/* Card Testimoni - pastikan tidak overflow */
 .card-custom {
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    margin-bottom: 20px;
 }
-.card-header-blue {
-    background-color: navy;
-    color: #fff;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
-    padding: 1rem;
-    z-index: 2;
+
+/* Hover Effect untuk Card Testimoni */
+.card-hover {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.1), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-hover:hover::before {
+    left: 100%;
+}
+
+
 
 /* ===== Peta Leaflet ===== */
 #map, #gis-map {
@@ -317,19 +343,69 @@ body {
     z-index: 2002 !important;
 }
 
-/* ===== Footer ===== */
+/* footer */
+.footer-desc {
+    font-size: 15px;
+    line-height: 1.8;           
+    color: #e0e0e0;             
+    font-weight: 500;           
+    text-transform: none;     
+    letter-spacing: 0.3px;     
+    text-align: justify;       
+    max-width: 480px;           
+}
+.footer-desc strong {
+    font-weight: 600;
+}
+
 .footer {
-    background: #1a237e;
+    background: linear-gradient(135deg, #001F3F, #003C8F);
+    color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
 }
-.footer a {
-    color: #fff;
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse 6s infinite ease-in-out;
 }
-.footer a:hover {
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.3); opacity: 0.1; }
+}
+
+.footer h5, 
+.footer h6 {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.footer-links li,
+.footer-contacts li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #cfd8dc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
-.footer hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
+
+
 
 /* ===== Responsif ===== */
 @media (max-width: 768px) {
@@ -354,3 +430,34 @@ body {
         margin: 10px 0;
     }
 }
+
+/* cuaca */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+.cuaca-card {
+    flex: 0 0 auto;
+    min-width: 180px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
