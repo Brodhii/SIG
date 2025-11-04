@@ -123,5 +123,4 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-     'api_url' => env('API_URL', 'http://localhost:8000/api/get-data'),
 ];

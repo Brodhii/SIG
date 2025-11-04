@@ -202,9 +202,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/esri-leaflet@3.0.8/dist/esri-leaflet.js"></script>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script>
-              const API_URL = "{{ config('app.api_url') }}";
-        </script>
         <script src="{{ asset('js/map.js') }}"></script>
     </body>
     </html>
