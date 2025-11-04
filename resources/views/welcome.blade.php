@@ -62,8 +62,7 @@
         <div class="bubble"></div>
 
         <div class="hero-content">
-            <h1>SITANJAK</h1>
-            <h3>(Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan)</h3>
+            <h2>SITANJAK Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan</h2>
             <p>
                 Platform digital terintegrasi yang menyajikan data ekosistem pesisir
                 mulai dari sebaran mangrove, habitat bentik,
