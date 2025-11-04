@@ -366,7 +366,7 @@ body {
 
 
 
-/* ==== Peta Leaflet ==== */
+/* ===== Peta Leaflet ===== */
 #map, #gis-map {
     position: relative;
     width: 100%;
@@ -414,10 +414,9 @@ body {
     overflow: hidden;
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.3; }
-    50% { transform: scale(1.3); opacity: 0.1; }
-}
+
+
+
 
 .footer h5, 
 .footer h6 {
