@@ -163,7 +163,7 @@ function buildPanel() {
       <hr>
       <div class="block">
         <div style="display:flex;justify-content:space-between;align-items:center;">
-          <b style="color:#E63946">Titik Tangkapan</b>
+          <b style="color:#FFE162">Titik Tangkapan</b>
           <div>
             <label class="switch">
               <input type="checkbox" id="toggleTangkapan" checked>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan</title>
+        <title>SITANJAK – Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan</title>
 
         <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,8 +66,8 @@
             <h3>(Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan)</h3>
             <p>
                 Platform digital terintegrasi yang menyajikan data ekosistem pesisir
-                mulai dari <b>sebaran mangrove</b>, <b>habitat bentik</b>,
-                hingga <b>lokasi penangkapan ikan</b> berbasis data dan teknologi.
+                mulai dari sebaran mangrove, habitat bentik,
+                hingga lokasi penangkapan ikan berbasis data dan teknologi.
             </p>
             <a href="#cuaca" class="cta-button">Jelajahi Sekarang</a>
         </div>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="card-body">
                         <p class="text-center text-muted">
-                            Peta interaktif ini untuk menemukan titik potensi ikan dan habitat perairan.
+                            Peta interaktif ini untuk menemukan titik tangkap ikan dan ekosistem pesisir.
                         </p>
                         <div id="gis-map" style="height: 500px; border-radius: 10px;"></div>
                     </div>
@@ -130,7 +130,7 @@
                    <div class="col-md-4 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
                        <div class="card card-custom card-hover p-4">
                             <p class="fst-italic text-muted">
-                                "Website ini sangat membantu saya dalam mencari lokasi ikan yang akurat dan efisien."
+                                "SITANJAK membantu saya menemukan lokasi tangkapan ikan dengan akurat dan efisien."
                             </p>
                             <footer class="blockquote-footer">Bapak Budi, <cite>Nelayan</cite></footer>
                         </div>
@@ -138,7 +138,7 @@
                     <div class="col-md-4 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
                        <div class="card card-custom card-hover p-4">
                             <p class="fst-italic text-muted">
-                                "Website ini memudahkan saya memantau kondisi mangrove dan habitat bentik di sekitar pesisir."
+                                "SITANJAK memudahkan saya memantau kondisi mangrove dan habitat bentik di sekitar pesisir."
                             </p>
                             <footer class="blockquote-footer">Ibu Siti, <cite>Warga</cite></footer>
                         </div>
@@ -163,9 +163,8 @@
                     <div class="col-lg-5 col-md-6">
                         <h5 class="fw-bold text-uppercase mb-3">SITANJAK</h5>
                         <p class="footer-desc mb-3">
-                            Platform digital terintegrasi yang mendukung nelayan dan masyarakat pesisir dengan menyediakan 
-                            data ekosistem perikanan, informasi cuaca, 
-                            dan peta potensi ikan berbasis teknologi geospasial.
+                            Platform digital terintegrasi untuk mendukung nelayan melalui data ekosistem pesisir, 
+                            dan peta tangkapan nelayan berbasis teknologi geospasial.
                         </p>
                     </div>
 
