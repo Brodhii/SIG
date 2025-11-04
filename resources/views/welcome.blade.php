@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sistem Informasi Digital Perikanan</title>
+        <title>Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan</title>
 
         <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
             <!-- Logo -->
             <div class="logo">
                 <img src="images/logo.png" alt="Logo Perikanan" class="hero-logo">
-                <span>Perikanan Digital</span>
+                <span>SITANJAK</span>
             </div>
             
             <!-- Tombol Toggle -->
@@ -62,7 +62,8 @@
         <div class="bubble"></div>
 
         <div class="hero-content">
-            <h1>Sistem Informasi Digital Perikanan</h1>
+            <h1>SITANJAK</h1>
+            <h3>(Sistem Informasi Tangkap Nelayan dan Ekosistem Pesisir Bintan)</h3>
             <p>
                 Platform digital terintegrasi yang menyajikan data ekosistem pesisir
                 mulai dari <b>sebaran mangrove</b>, <b>habitat bentik</b>,
@@ -160,7 +161,7 @@
                 <div class="row gy-4">
                     <!-- Tentang -->
                     <div class="col-lg-5 col-md-6">
-                        <h5 class="fw-bold text-uppercase mb-3">🌊 Sistem Informasi Digital Perikanan</h5>
+                        <h5 class="fw-bold text-uppercase mb-3">SITANJAK</h5>
                         <p class="footer-desc mb-3">
                             Platform digital terintegrasi yang mendukung nelayan dan masyarakat pesisir dengan menyediakan 
                             data ekosistem perikanan, informasi cuaca, 
@@ -183,9 +184,9 @@
                     <div class="col-lg-4 col-md-3 col-6">
                         <h6 class="fw-bold text-uppercase mb-3">Hubungi Kami</h6>
                         <ul class="list-unstyled footer-contacts">
-                            <li><i class="bi bi-envelope-fill me-2"></i> info@perikanan.digital</li>
-                            <li><i class="bi bi-telephone-fill me-2"></i> +62 812 3456 7890</li>
-                            <li><i class="bi bi-geo-alt-fill me-2"></i> Tanjungpinang, Kepulauan Riau</li>
+                            <li><i class="bi bi-envelope-fill me-2"></i> fortiamagfira@umrah.ac.id</li>
+                            <li><i class="bi bi-telephone-fill me-2"></i> 0822 7637 6581</li>
+                            <li><i class="bi bi-geo-alt-fill me-2"></i> Senggarang, Tanjungpinang, Kepulauan Riau</li>
                         </ul>
                     </div>
                 </div>
@@ -193,7 +194,7 @@
                 <hr class="border-light my-4">
 
                 <div class="text-center small text-light">
-                    &copy; {{ date('Y') }} <strong>Sistem Informasi Digital Perikanan.<br>
+                    &copy; {{ date('Y') }} <strong>SITANJAK.<br>
                 </div>
             </div>
         </footer>
@@ -201,6 +202,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/esri-leaflet@3.0.8/dist/esri-leaflet.js"></script>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script>
+              const API_URL = "{{ config('app.api_url') }}";
+        </script>
         <script src="{{ asset('js/map.js') }}"></script>
     </body>
     </html>

@@ -204,6 +204,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.hero h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 10px rgba(41, 40, 40, 0.723);
+    background: linear-gradient(90deg, #ffffff, #fef2f2b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .hero p {
     font-size: 1.2rem;
     color: #e3f2fd;
@@ -364,8 +374,6 @@ body {
     left: 100%;
 }
 
-
-
 /* ===== Peta Leaflet ===== */
 #map, #gis-map {
     position: relative;
@@ -414,10 +422,6 @@ body {
     overflow: hidden;
 }
 
-
-
-
-
 .footer h5, 
 .footer h6 {
     color: #ffffff;
@@ -439,8 +443,6 @@ body {
     color: #ffffff;
     text-decoration: underline;
 }
-
-
 
 /* ===== Responsif ===== */
 @media (max-width: 768px) {
