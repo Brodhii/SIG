@@ -418,9 +418,13 @@ body {
     letter-spacing: 0.5px;
 }
 
-.footer-links li,
-.footer-contacts li {
-    margin-bottom: 8px;
+@media (max-width: 576px) {
+    .footer-contacts li {
+        font-size: 14px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
 }
 
 .footer-links a {
